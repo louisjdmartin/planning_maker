@@ -1,0 +1,2 @@
+<?php
+	affichePlanning("def", $moi);

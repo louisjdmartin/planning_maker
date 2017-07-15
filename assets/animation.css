@@ -1,0 +1,212 @@
+.menu-icon{
+	width:54px;
+	height:54px;
+	position:relative;
+	background-color:transparent;
+	border-radius:50%;
+	margin:0px;
+	transition:.5s;
+	display:inline-block;
+}
+
+.menu-icon span{
+	width:22px;
+	height:2px;
+	background:#FFF;
+	display:inline-block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translateX(-50%) translateY(-50%);
+	transition:.5s;
+}
+
+.menu-icon span:before, .menu-icon span:after{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	width:22px;
+	height:2px;
+	display:block;
+	background:#FFF;
+	transition:.5s;
+	transform-origin:50% 50%;
+}
+.menu-icon span:before{
+	transform:translateY(-6px);
+}
+.menu-icon span:after{
+	transform:translateY(6px);
+}
+
+
+.menu-icon.isOpen.cross{
+	transform:rotate(-90deg);
+}.menu-icon.isOpen.validate{
+	transform:rotate(-180deg);
+}
+.menu-icon.isOpen.cross span,.menu-icon.isOpen.validate span{
+	background:transparent;
+	transition:.5s;
+}
+
+.menu-icon.isOpen.cross span:before{
+	transform:translateY(0) rotate(45deg);
+}
+.menu-icon.isOpen.cross span:after{
+	transform:translateY(0) rotate(-45deg);
+}
+
+.menu-icon.isOpen.validate span:before{
+	transform:translateY(-4px) translateX(12px) rotate(45deg);
+	width:10px;
+}
+.menu-icon.isOpen.validate span:after{
+	transform:translateY(-1px) translateX(-5px) rotate(-45deg);
+}
+
+.menu-icon svg{
+	fill:transparent;
+	stroke-width:2px;
+	stroke-dasharray:170;
+	stroke-dashoffset:170;
+	transition: .7s ease;
+}
+.menu-icon.isOpen.validate svg{
+	fill:rgba(0,255,0,.7);
+	stroke:green;
+}.menu-icon.isOpen.cross svg{
+	stroke-dashoffset:0;
+	fill:transparent;
+	stroke:transparent;
+}
+
+
+.menu-icon.isOpen.arrow svg{
+	stroke-dashoffset:0;
+	fill:transparent;
+	stroke:transparent;
+}
+.menu-icon.isOpen.arrow span:before{
+	transform:translateY(-3px) translateX(14px) rotate(45deg);
+	width:10px;
+}
+.menu-icon.isOpen.arrow span:after{
+	transform:translateY(3px) translateX(14px) rotate(-45deg);
+	width:10px;
+}
+.menu-icon.isOpen.arrow{
+	transform:rotate(-180deg);
+}
+.menu-icon.isOpen.cross span,.menu-icon.isOpen.arrow span{
+	transition:.5s;
+}
+
+
+
+
+.menu-icon.isOpen.play svg{
+	stroke-dashoffset:0;
+	fill:rgba(0,255,0,.7);
+	stroke:green;
+}
+.menu-icon.isOpen.play span{
+	transition:background .5s .3s,transform .5s;
+	transform:translateY(7px) translateX(-50%);
+}
+.menu-icon.isOpen.play span:before{
+	transform:translateY(-9px) translateX(6px) rotate(60deg);
+}
+.menu-icon.isOpen.play span:after{
+	transform:translateY(-9px) translateX(-5px) rotate(-60deg);
+}
+.menu-icon.isOpen.play{
+	transform:rotate(90deg);
+}
+
+
+.menu-icon.isOpen.pause svg{
+	stroke-dashoffset:0;
+	fill:orange;
+	stroke:orange;
+}
+.menu-icon.isOpen.pause span{
+	transition:background .3s,transform .5s;
+	background:transparent;
+}
+.menu-icon.isOpen.pause{
+	transform:rotate(-90deg);
+}
+
+
+
+
+.menu-icon.loading svg{
+	stroke-width:3px;
+	stroke:dodgerblue;
+}
+.menu-icon.loading svg circle{
+	-webkit-animation: 1s strokeSpin infinite linear;
+	animation: 1s strokeSpin infinite linear;
+}
+@-webkit-keyframes spin{
+	0%{
+		transform:rotate(180deg);
+	}100%{
+		transform:rotate(540deg)
+	}
+}
+@-webkit-keyframes strokeSpin{
+	0%{
+		stroke-dashoffset:0;
+	}50%{
+		stroke-dashoffset:170;
+	}100%{
+		stroke-dashoffset:0;
+	}
+}@keyframes spin{
+	0%{
+		transform:rotate(180deg);
+	}100%{
+		transform:rotate(540deg)
+	}
+}
+@keyframes strokeSpin{
+	0%{
+		stroke-dashoffset:170;
+		stroke:dodgerblue;
+	}70%{
+		stroke-dashoffset:0;
+		stroke:dodgerblue;
+	}100%{
+		stroke:transparent;
+		stroke-dashoffset:0;
+	}
+}
+
+
+.menu-icon.isOpen.pen svg{
+	stroke-dashoffset:0;
+	fill:dodgerblue;
+	stroke:dodgerblue;
+}
+.menu-icon.isOpen.pen span{
+	transition:background .5s .3s,transform .5s;
+	transform:translateY(-2px) translateX(-3px) translateX(-50%);
+	width:22px;
+	height:5px;
+}
+.menu-icon.isOpen.pen span:before{
+	transform:translateY(0px) translateX(25px) rotate(0deg);
+	width:5px;
+	height:5px;
+}
+.menu-icon.isOpen.pen span:after{
+	transform:translateY(1px) translateX(-2px) rotate(45deg);
+	width:3px;
+	height:3px;
+}
+.menu-icon.isOpen.pen{
+	transform:rotate(-45deg);
+}
