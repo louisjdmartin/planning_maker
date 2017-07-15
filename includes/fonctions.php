@@ -1,5 +1,6 @@
 <?php
-	$bdd = new PDO('mysql:host=localhost;dbname=planning_maker', 'louis', 'louismartin');
+	require dirname(__FILE__) ."/config.php";
+	$bdd = new PDO(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASS);
 	require dirname(__FILE__) ."/../objets/creneau.php";
 	require dirname(__FILE__) ."/../objets/membre.php";
 	$version = "2.0.1";
