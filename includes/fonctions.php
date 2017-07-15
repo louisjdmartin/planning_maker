@@ -1,5 +1,5 @@
 <?php
-	require dirname(__FILE__) ."/config.php";
+	require dirname(__FILE__) ."/config.conf.php";
 	$bdd = new PDO(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASS);
 	require dirname(__FILE__) ."/../objets/creneau.php";
 	require dirname(__FILE__) ."/../objets/membre.php";
