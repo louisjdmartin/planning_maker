@@ -95,10 +95,12 @@ class membre
 
 		$this->tmp_affectation = $i;
 	}
+	
 	public function tempsPerm()
 	{
 		return $this->tmp_affectation;
 	}
+	
 	public function affichePerm()
 	{
 		$min = $this->tempsPerm();

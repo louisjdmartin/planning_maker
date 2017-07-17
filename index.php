@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="./assets/animation.css" />
 		<script src="http://code.jquery.com/jquery.min.js"></script>
 		<script src="./assets/script.js"></script>
-		<title>Planning maker V2</title>
+		<title>Planning maker V<?php echo $version; ?></title>
 		<meta charset="utf-8" />
         <meta name="msapplication-TileColor" content="#F44336"/>
         <meta name="theme-color" content="#F44336">
