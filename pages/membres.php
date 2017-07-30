@@ -41,5 +41,7 @@
 					<td>
 						<a onclick='addMb()'>Ajouter... </a>
 					</td>
-				</tr>";
+				</tr>
+			</table>
+			";
 			
