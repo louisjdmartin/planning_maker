@@ -3,7 +3,13 @@
 	$bdd = new PDO(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASS);
 	require dirname(__FILE__) ."/../objets/creneau.php";
 	require dirname(__FILE__) ."/../objets/membre.php";
-	$version = "1.0";
+	/* VERSION:
+		Majeur.mineur.revision
+		Ajout fonction: =.+1.0
+		Modification mineure/correction bug: =.=.+1
+		On change tout: +1.0.0
+	*/
+	$version = "1.0.1";
 	$jours = array("Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche");
 	
 	
