@@ -9,7 +9,7 @@
 		Modification mineure/correction bug: =.=.+1
 		On change tout: +1.0.0
 	*/
-	$version = "1.0.2";
+	$version = "1.0.3";
 	$jours = array("Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche");
 	
 	
@@ -62,10 +62,12 @@
 			for($i=0;$i<$c['affectations'];$i++)
 			{
 				$liste_membres = array_diff($liste_membres, $affecte);
-				$member = min_perm($liste_membres, $obj_membres);
-				$affecte[] = $member;
-				$bdd->query("INSERT INTO planning_temp VALUES (".$c['c_id'].", ".$member.")");
-				$obj_membres[$member]->setTmpAffectation($obj_membres[$member]->tempsPerm() + $c['c_poids']);
+				if(count($liste_membres)){
+					$member = min_perm($liste_membres, $obj_membres);
+					$affecte[] = $member;
+					$bdd->query("INSERT INTO planning_temp VALUES (".$c['c_id'].", ".$member.")");
+					$obj_membres[$member]->setTmpAffectation($obj_membres[$member]->tempsPerm() + $c['c_poids']);
+				}
 			}
 		}
 		

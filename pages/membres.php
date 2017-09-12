@@ -7,7 +7,7 @@
 		
 		$last = strtotime($mb->getLastModif());
 		if(date("d-m-y") == date("d-m-y", $last)) $affLast = "Aujourd'hui à ".date("h:i", $last);
-		else $affLast = date("d-m-Y à h:i");
+		else $affLast = date("d-m-Y à H:i",$last);
 		
 		echo "
 			<table>
