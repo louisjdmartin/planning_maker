@@ -9,7 +9,7 @@
 		Modification mineure/correction bug: =.=.+1
 		On change tout: +1.0.0
 	*/
-	$version = "1.0.3";
+	$version = "1.0.4";
 	$jours = array("Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche");
 	
 	
