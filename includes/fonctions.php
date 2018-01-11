@@ -48,7 +48,7 @@
 		}
 
 		
-		$creneaux = $bdd->query("SELECT c_id,affectations,c_poids FROM creneaux ORDER BY c_poids DESC");
+		$creneaux = $bdd->query("SELECT c_id,affectations,c_poids FROM creneaux ORDER BY c_poids DESC, RAND()");
 		foreach($creneaux as $c)
 		{
 			$liste_membres = array();
@@ -75,12 +75,13 @@
 		file_put_contents ( dirname(__FILE__) ."/../phpfiles/last_genere" , time() );
 	}
 	
-	function affichePlanning($p, $moi)
+        function affichePlanning($p, $moi, $day='ALL')
 	{
 		global $jours;
 		global $bdd;
-		$creneaux = $moi->getAllPerm();
-	
+		
+		if($day=='ALL')$creneaux = $moi->getAllPerm();
+		else $creneaux[$day] = $moi->getAllPermByDay($day);
 		foreach($creneaux as $jour=>$liste_creneaux)
 		{
 			echo '<table>

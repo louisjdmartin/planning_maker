@@ -1,8 +1,14 @@
+<script>
+	function valide(){
+		$('#fct_genere').html("<form action='ajax/valide.php' method='POST'><input id='mdp' type='password' name='pass' placeholder='Mot de passe de validation' /><input type='submit' value='Valider' /></form>");
+		$('#mdp').focus();
+	}
+</script>
 <table>
 	<tr>
-		<td>Fonctions: <br />
+		<td id='fct_genere'>Fonctions: <br />
 			<a href="ajax/regenere.php">Regenerer</a>
-			<a href="ajax/valide.php">Valider</a>
+			<a onclick='valide()'>Valider</a>
 		</td>
 	</tr>
 </table><div style='clear:both'></div>

@@ -1,7 +1,7 @@
 <?php
 	
 	
-	$page = "definitif";
+	$page = "defaut";
 	if(isset($_GET['reset'])){
 		setcookie("m_id", NULL, time(), "/");
 		header("location:.");

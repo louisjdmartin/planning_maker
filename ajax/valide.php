@@ -1,4 +1,5 @@
 <?php
+	if(!isset($_POST['pass']) OR $_POST['pass']!='pmk_blizzard')die("Acc&egrave;s refus&eacute; !");
 	require "../includes/fonctions.php"; 
 	require "../includes/ini.php";
 	$bdd->query("TRUNCATE TABLE planning_last");
