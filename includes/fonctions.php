@@ -5,11 +5,11 @@
 	require dirname(__FILE__) ."/../objets/membre.php";
 	/* VERSION:
 		Majeur.mineur.revision
-		Ajout fonction: =.+1.0
-		Modification mineure/correction bug: =.=.+1
+		Ajout fonction: = x.+1.0
+		Modification mineure/correction bug: = x.x.+1
 		On change tout: +1.0.0
 	*/
-	$version = "1.0.4";
+	$version = "1.1.1";
 	$jours = array("Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche");
 	
 	
