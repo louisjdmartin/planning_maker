@@ -8,7 +8,7 @@
 	<head>
 		<link rel="stylesheet" href="./assets/style.css" />
 		<link rel="stylesheet" href="./assets/animation.css" />
-		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery.min.js"></script>
 		<script src="./assets/script.js"></script>
 		<title>Planning maker V<?php echo $version; ?></title>
 		<meta charset="utf-8" />
