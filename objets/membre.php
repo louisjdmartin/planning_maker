@@ -149,7 +149,7 @@ class membre
 	}
 	public function add()
 	{
-		$q = $this->bdd->query("INSERT INTO membres VALUES(NULL,'','')");
+		$q = $this->bdd->query("INSERT INTO membres VALUES(NULL,'',CURRENT_TIMESTAMP)");
 		$this->id = $this->bdd->lastInsertId();
 	}
 
