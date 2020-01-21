@@ -14,7 +14,7 @@
 	if($conf)$jours = json_decode(fgets($conf));
 	if(!$conf || !$jours){
 		$jours = $defaultDays;
-		$conf = fopen($conf_file,'a');
+		$conf = fopen($conf_file,'w+');
 		fwrite($conf,json_encode($jours));
 	}
 
