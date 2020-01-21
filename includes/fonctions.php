@@ -1,10 +1,22 @@
 <?php
-	$jours = array("Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche");
 	require dirname(__FILE__) ."/config.conf.php";
 	$bdd = new PDO(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASS);
 	require dirname(__FILE__) ."/../objets/creneau.php";
 	require dirname(__FILE__) ."/../objets/membre.php";
-	$version = "1.1.1";
+	$version = "1.2";
+
+	$conf=null;
+	$conf_file=dirname(__FILE__)."\jours.json";
+
+	if(file_exists($conf_file))$conf = fopen($conf_file,'r');
+	if($conf)$jours = json_decode(fgets($conf));
+	if(!$conf || !$jours){
+		$jours = array("Lundi","Mardi","Mercredi","Jeudi","Vendredi");
+		$conf = fopen($conf_file,'a');
+		fwrite($conf,json_encode($jours));
+	}
+
+
 	define("NUMBER_OF_DATES", count($jours));
 
 

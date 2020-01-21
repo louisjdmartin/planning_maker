@@ -35,3 +35,8 @@
 <strong>V1.1.1</strong>
 <br />- Planning du jour affiché par défaut (au lieu de tout le planning)
 <br />- Correction bug d'affichage du planning le dimanche
+
+<br />
+<strong>V1.2</strong>
+<br />- Correction bug d'écriture de cookies
+<br />- Ajout de la configuration des libelles des jours

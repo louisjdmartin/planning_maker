@@ -54,6 +54,7 @@
 							<a href="?page=last">Voir le planning de la semaine précédente</a>
 							<a href="?page=modifcreneau">Modifier les creneaux</a>
 							<a href="?page=membres">Modifier les membres</a>
+							<a href="?page=jours">Modifier les jours</a>
 							<a href="?page=changelog">Changelog</a>
 						</div>
 					</div>
