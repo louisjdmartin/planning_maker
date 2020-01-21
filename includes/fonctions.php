@@ -8,7 +8,7 @@
 	$conf=null;
 	$conf_file=dirname(__FILE__)."/jours.json";
 
-	$defaultDays = array("Lundi","Mardi","Mercredi","Jeudi","Vendredi");
+	$defaultDays = array("Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche");
 
 	if(file_exists($conf_file))$conf = fopen($conf_file,'r');
 	if($conf)$jours = json_decode(fgets($conf));
