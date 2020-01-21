@@ -41,7 +41,10 @@
 <br />- Correction bug d'écriture de cookies
 <br />- Ajout de la configuration des libelles des jours
 
-
 <br />
 <strong>V1.2.1</strong>
+<br />- Correction bug mineurs
+
+<br />
+<strong>V1.2.2</strong>
 <br />- Correction bug mineurs
