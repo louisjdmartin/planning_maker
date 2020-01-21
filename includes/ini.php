@@ -7,7 +7,7 @@
 		header("location:.");
 	}
 	if(isset($_GET['choix'])){
-		setcookie("m_id", $_GET['choix'], time()+24*3600*365, "/");
+		setcookie("m_id", $_GET['choix'], time()+24*3600*365);
 		header("location:.");
 	}
 	

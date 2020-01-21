@@ -1,9 +1,8 @@
 <?php 
-	ini_set("display_errors","1");
+	//ini_set("display_errors","1");
 	require "includes/fonctions.php"; 
 	require "includes/ini.php";
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" href="./assets/style.css" />
