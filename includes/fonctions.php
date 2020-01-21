@@ -20,9 +20,6 @@
 	define("NUMBER_OF_DATES", count($jours));
 
 
-
-
-
 	function compter_perm($mb){
 		return $mb->tempsPerm();
 	}
