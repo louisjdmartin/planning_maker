@@ -1,11 +1,11 @@
 $(document).ready(function(){
-	
+
 	$('.menu-icon').click(function(e){
 		e.preventDefault();
 		$this=$(this);
 		if($this.hasClass('menuS')){
             $('.menu-icon').removeClass('isClosed arrow');
-            $('.menu-icon').addClass('isOpen cross');	
+            $('.menu-icon').addClass('isOpen cross');
 			a=1;
             setTimeout(function(){
                 $('.menu-icon').addClass('isClosed arrow');
@@ -22,17 +22,17 @@ $(document).ready(function(){
 			else{
                 $('.menu_open').slideDown(500);
 				$this.removeClass('isClosed');
-				$this.addClass('isOpen');	
+				$this.addClass('isOpen');
                 $('#content').css({"opacity":".1"});
 			}
 		}
-		
+
 	});
-	
-	
+
+
 	// TODO REVOIR TOUT CA
-	
-	
+
+
     $('.menu_open a,.ajax_a').bind("click",function(e){
         e.preventDefault();
         $('.menu-icon').addClass("loading");
@@ -50,7 +50,7 @@ $(document).ready(function(){
     //history.pushState({key: window.location}, 'titre', window.location);
 	window.onpopstate = function(event){
         $('.menu-icon').removeClass('isClosed arrow');
-        $('.menu-icon').addClass('isOpen');	
+        $('.menu-icon').addClass('isOpen');
         $('.menu-icon').addClass("loading");
         href=window.location.toString();
 		href=href.replace(window.location.pathname, "");
@@ -92,13 +92,17 @@ function modifCreneau(id,jour)
 }
 function addCreneau(jour)
 {
+	affectation = $('#c_aff_add_'+jour).val()
+	if(affectation<1 || $('#c_dur_add_'+jour).val() < 0){
+		return;
+	}
 	$('.menu-icon').addClass("loading");
 	$.post('ajax/modifCreneau.php',
 		{
 			id:0,
 			c_deb:$('#c_deb_add_'+jour).val(),
 			c_fin:$('#c_fin_add_'+jour).val(),
-			affectations:$('#c_aff_add_'+jour).val(),
+			affectations:affectation,
 			c_poids:$('#c_dur_add_'+jour).val(),
 			c_jour:jour
 		},function(){

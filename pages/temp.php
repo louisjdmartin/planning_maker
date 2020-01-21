@@ -1,6 +1,6 @@
 <script>
 	function valide(){
-		$('#fct_genere').html("<form action='ajax/valide.php' method='POST'><input id='mdp' type='password' name='pass' placeholder='Mot de passe de validation' /><input type='submit' value='Valider' /></form>");
+		$('#fct_genere').html("<form action='ajax/valide.php' method='POST'><input type='submit' value='Confirmer' /></form>");
 		$('#mdp').focus();
 	}
 </script>
@@ -17,7 +17,7 @@
 
 
 	affichePlanning("temp", $moi);
-	
+
 	$membres = $bdd->query("SELECT * FROM membres ORDER BY m_nom");
 	echo "<table><tr><th><strong>Compteur de perms</strong></th></tr>";
 	foreach($membres as $mb){

@@ -3,7 +3,7 @@
 	$bdd = new PDO(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASS);
 	require dirname(__FILE__) ."/../objets/creneau.php";
 	require dirname(__FILE__) ."/../objets/membre.php";
-	$version = "1.2";
+	$version = "1.2.1";
 
 	$conf=null;
 	$conf_file=dirname(__FILE__)."\jours.json";
