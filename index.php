@@ -1,6 +1,6 @@
-<?php 
-	//ini_set("display_errors","1");
-	require "includes/fonctions.php"; 
+<?php
+	ini_set("display_errors","1");
+	require "includes/fonctions.php";
 	require "includes/ini.php";
 ?><!DOCTYPE html>
 <html>
@@ -17,18 +17,18 @@
 
 
 	</head>
-	
+
 	<body>
 	<?php
 		if(!isset($_COOKIE['m_id'])){
-			
+
 			include("pages/identification.php");
-			
-			
+
+
 		}
 		else
 		{
-			
+
 			?>
 				<div id="head_menu">
 					<div class="menu-icon arrow isClosed" style="float:left;">
@@ -39,17 +39,16 @@
 					</div>
 					<div id="menu" style="margin-top:18px;margin-bottom:0px;">
 						<div class='menu_closed'>
-							<strong><?php echo $moi->getNom(); ?></strong> - 
-							<a href="./?reset=1">(modifier)</a> - 
-							<a href='https://bde.isima.fr/espace_ZZ'>(Retour site BDE)</a>
+							<strong><?php echo $moi->getNom(); ?></strong> -
+							<a href="./?reset=1">(Ce n'est pas vous ?)</a>
 						</div>
 						<div class='menu_open' style="display:none;padding-top:8px;"><br />
 							<span><strong>Tâches courantes</strong></span>
 							<a href="?page=definitif">Voir le planning definitif</a>
 							<a href="?page=dispos">Saisir mes disponibilitées</a>
 							<a href="?page=absences">Signaler une absence</a><br /><br />
-							
-							
+
+
 							<span><strong>Gestion planning maker</strong></span>
 							<a href="?page=temp">Voir le planning temporaire</a>
 							<a href="?page=last">Voir le planning de la semaine précédente</a>
@@ -59,26 +58,26 @@
 						</div>
 					</div>
 				</div>
-				
-				
+
+
 				<table>
 					<tr>
 						<td>Temps de permanence cette semaine: <br /><?php $moi->affichePerm(); ?></td>
 					</tr>
 				</table>
-				
+
 				<table>
 					<tr>
 						<td>Temps d'absence cette semaine: <br /><?php $moi->afficheAbsence(); ?></td>
 					</tr>
 				</table>
 
-				
+
 				<div id="content">
 					<?php include("pages/$page.php"); ?>
 				</div>
-			<?php 
-		} 
+			<?php
+		}
 	?>
 	<div class='version'><em>Planning Maker V<?php echo $version; ?> - Louis Martin</em></div>
 	</body>
