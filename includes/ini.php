@@ -1,16 +1,16 @@
 <?php
-	
-	
+
+
 	$page = "defaut";
 	if(isset($_GET['reset'])){
-		setcookie("m_id", NULL, time(), "/");
+		setcookie("m_id", NULL, time());
 		header("location:.");
 	}
 	if(isset($_GET['choix'])){
 		setcookie("m_id", $_GET['choix'], time()+24*3600*365);
 		header("location:.");
 	}
-	
+
 	if(isset($_GET['page']))$page = $_GET['page'];
 	if(!isset($_COOKIE['m_id'])){$page = "identification";}
 	else {
