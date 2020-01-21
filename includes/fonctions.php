@@ -6,7 +6,7 @@
 	$version = "1.2";
 
 	$conf=null;
-	$conf_file=dirname(__FILE__)."\jours.json";
+	$conf_file=dirname(__FILE__)."/jours.json";
 
 	if(file_exists($conf_file))$conf = fopen($conf_file,'r');
 	if($conf)$jours = json_decode(fgets($conf));
