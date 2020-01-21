@@ -8,10 +8,12 @@
 	$conf=null;
 	$conf_file=dirname(__FILE__)."/jours.json";
 
+	$defaultDays = array("Lundi","Mardi","Mercredi","Jeudi","Vendredi");
+
 	if(file_exists($conf_file))$conf = fopen($conf_file,'r');
 	if($conf)$jours = json_decode(fgets($conf));
 	if(!$conf || !$jours){
-		$jours = array("Lundi","Mardi","Mercredi","Jeudi","Vendredi");
+		$jours = $defaultDays;
 		$conf = fopen($conf_file,'a');
 		fwrite($conf,json_encode($jours));
 	}
