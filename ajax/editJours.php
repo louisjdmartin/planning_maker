@@ -1,5 +1,4 @@
 <?php
-  $conf = fopen("../includes/jours.json","w");
   $jours = explode(";",$_POST['jours']);
 
 
@@ -13,6 +12,7 @@
     }
   }
 
+  $conf = fopen("../includes/jours.json","w");
   fwrite($conf,json_encode($jours));
   header('location:../?page=jours')
 ?>
