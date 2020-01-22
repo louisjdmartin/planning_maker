@@ -31,7 +31,7 @@
 
 			?>
 				<div id="head_menu">
-					<div class="menu-icon arrow isClosed" style="float:left;">
+					<div class="menu-icon cross isClosed" style="float:left;">
 						<svg x="0" y="0" width="54px" height="54px" viewBox="0 0 54 54">
 							<circle cx="27" cy="27" r="26"></circle>
 						</svg>
